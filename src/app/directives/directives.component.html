@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>*ngIf() ng-template </h3>
+      <hr>
+      <p *ngIf="condition1; else condition2">Show This Para When Something Is true (if-condition)</p>
+      <br>
+      <ng-template #condition2>
+        <p>Else Show This Para (else-condition)</p>
+      </ng-template>
+      <input type="text" class="form-control" placeholder="Enter Text"><br>
+      <button class="btn btn-primary" (click)="showPara()">If-Condition</button>
+      <button class="btn btn-danger" (click)="hidePara()">Else-Condition</button>
+    </div>
+    <div class="col-sm-6">
+      <h3>ngStyle</h3>
+      <hr>
+      <p [ngStyle]="{color :getColor()}">Server with name {{serverName}} is  {{serverStatus}}</p>
+      <p>Refresh Page To See Server Status Changing</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>ngClass</h3>
+      <p [ngStyle]="{color :getColor()}" [ngClass]="{pclass : serverStatus === getServerStatus()}">Server With Name {{serverName}} is {{serverStatus}}</p>
+      <hr>
+    </div>
+    <div class="col-sm-4">
+      <h3>*ngFor</h3>
+      <input type="text" class="form-control" [(ngModel)]="newServer">
+      <ul *ngFor="let server of servers">
+        <li>{{server}}</li>
+      </ul>
+      <button class="btn btn-primary" (click)="addServer()">Add Server</button>
+      <hr>
+    </div>
+    <div class="col-sm-4">
+      <h3>Extra...</h3>
+      <hr>
+    </div>
+  </div>
+</div>

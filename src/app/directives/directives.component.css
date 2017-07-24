@@ -1,7 +1,10 @@
-h1{
+h3{
   text-align: center;
-  color: blueviolet;
+  font-weight: bold;
 }
 hr{
   background-color: blueviolet; height: 1px; border: 0;
+}
+.pclass{
+  background-color: cadetblue;
 }
